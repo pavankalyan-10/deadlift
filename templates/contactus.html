@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact Us |
+{% endblock title %}
+{% block body %}
+<div class="container-fluid px-0" >
+    <img src="{% static 'contact.jfif ' %} " class="d-block w-100 " alt= "buffalow-skyline" width = "500" height="300" >
+</div>
+<br>
+<center><h1 style="font-size:40px;font-family: 'Lucida Console'">CONTACT US</h1></center>
+<div class="container">
+<form class="post" action="/contactus">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter Your Name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="phone">Mobile Number</label>
+        <input type="text" class="form-control" id="phone" placeholder="Enter Your Mobile Number">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter Your E-mail">
+      </div>
+      <div class="form-group">
+        <label for="queries">Queries</label>
+        <input type="queries" class="form-control" id="queries" placeholder="If Any Queries">
+      </div>
+ 
+   <CENTER> <button class="btn btn-primary"type="submit">SUBMIT</button> </CENTER>
+  </form>
+</div>
+{% endblock body %}
